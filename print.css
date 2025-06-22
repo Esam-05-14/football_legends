@@ -1,0 +1,46 @@
+/* Print Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    background: #FFF;
+}
+
+body::before, .hero::before {
+    display: none;
+}
+
+nav, #back-to-top, #toggle-contrast, .video-container, .search-bar, form {
+    display: none;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    font-size: 12pt;
+}
+
+.player-grid {
+    display: block;
+}
+
+.player {
+    page-break-inside: avoid;
+    margin-bottom: 20pt;
+}
+
+h1, h2, h3, h4 {
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer {
+    display: none;
+}

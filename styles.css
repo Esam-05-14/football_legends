@@ -1,0 +1,514 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background: url('images/football-field.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #F5F5F5;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: -1;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #1A3C34;
+    color: #FFF;
+    padding: 8px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header and Navigation */
+header {
+    background: transparent;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    background: #1A3C34;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0.625rem 0;
+}
+
+nav {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+}
+
+nav a {
+    color: #FFF;
+    text-decoration: underline;
+    padding: 0.5rem 0.9375rem;
+    border-radius: 0.3125rem;
+    transition: background 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background: #FFD700;
+    color: #1A3C34;
+}
+
+nav a:visited {
+    color: #CCCCCC;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.breadcrumb li {
+    font-size: 0.875rem;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '>';
+    margin-left: 0.625rem;
+}
+
+.breadcrumb a {
+    color: #1A3C34;
+    text-decoration: underline;
+}
+
+.breadcrumb a:visited {
+    color: #666;
+}
+
+/* Links */
+a {
+    color: #1A3C34;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #666;
+}
+
+a:hover {
+    color: #FFD700;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/football-field.jpg') no-repeat center center;
+    background-size: cover;
+    color: #FFF;
+    text-align: center;
+    padding: 6.25rem 1.25rem;
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.625rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Container */
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: #1A3C34;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 0.625rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.9375rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Flags and Team Logos */
+.flag-img, .team-logo {
+    height: 2.5rem;
+    width: auto;
+    max-width: 3.75rem;
+    object-fit: contain;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    gap: 0.625rem;
+    margin-bottom: 1.25rem;
+    max-width: 31.25rem;
+}
+
+#search-input {
+    flex: 1;
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+}
+
+#search-input:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+#search-button {
+    background: #1A3C34;
+    color: #FFF;
+    padding: 0.625rem 0.9375rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#search-button:hover {
+    background: #FFD700;
+    color: #1A3C34;
+}
+
+/* Form Section */
+#legend-form {
+    background: #FFF;
+    padding: 1.875rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3125rem;
+    color: #1A3C34;
+}
+
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+    margin-right: 0.3125rem;
+    vertical-align: middle;
+}
+
+.form-group i {
+    margin-right: 0.3125rem;
+    color: #FFD700;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+button {
+    background: #1A3C34;
+    color: #FFF;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #FFD700;
+    color: #1A3C34;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.25rem;
+    background: #FFF;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    font-weight: bold;
+    padding: 0.625rem;
+    background: #F5F5F5;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background: #1A3C34;
+    color: #FFF;
+}
+
+td {
+    background: #F5F5F5;
+}
+
+/* Player Grid */
+.player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.player {
+    background: #FFF;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+
+.player-img, .section-img {
+    max-width: 100%;
+    width: 12.5rem;
+    height: auto;
+    border-radius: 0.3125rem;
+    margin-bottom: 0.9375rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 1.25rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+footer {
+    background: #1A3C34;
+    color: #FFF;
+    text-align: center;
+    padding: 1.25rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Back to Top Button */
+#back-to-top, #toggle-contrast {
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    background: #1A3C34;
+    color: #FFF;
+    border: none;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#toggle-contrast {
+    bottom: 5rem;
+    font-size: 0.75rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover, #toggle-contrast:hover {
+    background: #FFD700;
+    color: #1A3C34;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    table, th, td {
+        font-size: 0.875rem;
+    }
+
+    .player-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .player-img, .section-img {
+        width: 9.375rem;
+    }
+
+    .flag-img, .team-logo {
+        height: 1.875rem;
+        max-width: 3.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.625rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .player-img, .section-img {
+        width: 7.5rem;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    #search-button {
+        padding: 0.625rem;
+    }
+}
