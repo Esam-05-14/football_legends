@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home – Best Legends</title>
+    <link rel="stylesheet" href="styles.css" id="main-stylesheet">
+    <link rel="stylesheet" href="high-contrast.css" id="high-contrast-stylesheet" disabled>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav class="sticky">
+            <div class="logo">Best Legends</div>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="nationality.html">By Nationality</a></li>
+                <li><a href="teams.html">By Team</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Welcome to Best Legends</h1>
+            <p>Discover the greatest soccer legends of all time</p>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section id="highlight-video" class="container">
+            <h2>Best Goals in History</h2>
+            <div class="video-container">
+                <video src="images/Top-100-Goals-Scored-By-Legendary-Football-Players.mp4" width="560" height="500" controls muted autoplay poster="images/footballers.jpg" title="Video showcasing top goals by legendary football players">
+                    Your browser does not support the video tag.
+                </video>
+                <details>
+                    <summary>Video Description</summary>
+                    <p>This video compiles the top 100 goals scored by legendary football players, including Lionel Messi, Cristiano Ronaldo, and Diego Maradona. It features stunning long-range shots, skillful dribbles, and iconic moments from major tournaments like the FIFA World Cup and UEFA Champions League. The video includes commentary in English, lasts approximately 5 minutes, and showcases goals from the 1970s to the present day.</p>
+                </details>
+            </div>
+        </section>
+
+        <section id="legend-form" class="container">
+            <h2>Who is Your Legend?</h2>
+            <form id="user-form" method="post" action="mailto:C5O62L@inf.elte.hu">
+                <div class="form-group">
+                    <label for="user-name"><i class="fas fa-user"></i> Your Name:</label>
+                    <input type="text" id="user-name" name="user-name" required maxlength="50" size="30">
+                </div>
+                <div class="form-group">
+                    <label for="legend-name"><i class="fas fa-star"></i> Name of Your Legend:</label>
+                    <input type="text" id="legend-name" name="legend-name" required maxlength="50" size="30">
+                </div>
+                <div class="form-group">
+                    <fieldset>
+                        <legend><i class="fas fa-futbol"></i> Role of Your Legend:</legend>
+                        <input type="radio" id="striker" name="legend-role" value="striker" required>
+                        <label for="striker">Striker</label>
+                        <input type="radio" id="midfielder" name="legend-role" value="midfielder">
+                        <label for="midfielder">Midfielder</label>
+                        <input type="radio" id="defender" name="legend-role" value="defender">
+                        <label for="defender">Defender</label>
+                    </fieldset>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-trophy"></i> Achievements:</label>
+                    <input type="checkbox" id="world-cup" name="achievements" value="world-cup">
+                    <label for="world-cup">FIFA World Cup</label>
+                    <input type="checkbox" id="ballon-dor" name="achievements" value="ballon-dor">
+                    <label for="ballon-dor">Ballon d'Or</label>
+                </div>
+                <div class="form-group">
+                    <label for="user-goal"><i class="fas fa-futbol"></i> Best Achievements of Your Legend:</label>
+                    <textarea id="user-goal" name="user-goal" rows="5" required maxlength="500"></textarea>
+                </div>
+                <button type="submit">Submit Your Legend</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+
+        <section id="overview" class="container">
+            <h2>Legendary Players</h2>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search by player, team, or country...">
+                <button id="search-button"><i class="fas fa-search"></i> Search Players</button>
+            </div>
+            <details>
+                <summary>Player Statistics</summary>
+                <table id="players-table">
+                    <caption>Overview of Legendary Players</caption>
+                    <thead>
+                        <tr>
+                            <th>Player Name</th>
+                            <th>Career Path</th>
+                            <th>Nationality</th>
+                            <th>Trophies</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Lionel_Messi">Lionel Messi</a></td>
+                            <td>FC Barcelona (2000-2021), Paris Saint-Germain (2021-2023), Inter Miami (2023-)</td>
+                            <td>Argentina</td>
+                            <td><strong>8× Ballon d'Or</strong>, 4× UEFA Champions League, 10× La Liga, <strong>1× FIFA World Cup (2022)</strong>, 1× Copa America (2021)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo">Cristiano Ronaldo</a></td>
+                            <td>Sporting CP (2002-2003), Manchester United (2003-2009, 2021-2022), Real Madrid (2009-2018), Juventus (2018-2021), Al Nassr (2023-)</td>
+                            <td>Portugal</td>
+                            <td><strong>5× Ballon d'Or</strong>, 5× UEFA Champions League, 7× League Titles, UEFA Euro 2016</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Zinedine_Zidane">Zinedine Zidane</a></td>
+                            <td>Cannes (1989-1992), Bordeaux (1992-1996), Juventus (1996-2001), Real Madrid (2001-2006)</td>
+                            <td>France</td>
+                            <td><strong>1× FIFA World Cup (1998)</strong>, 1× UEFA Euro (2000), 1× UEFA Champions League (2002), <strong>1× Ballon d'Or (1998)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Diego_Maradona">Diego Maradona</a></td>
+                            <td>Argentinos Juniors (1976-1981), Boca Juniors (1981-1982, 1995-1997), Barcelona (1982-1984), Napoli (1984-1991), Sevilla (1992-1993), Newell's Old Boys (1993-1994)</td>
+                            <td>Argentina</td>
+                            <td><strong>1× FIFA World Cup (1986)</strong>, 2× Serie A, 1× Copa del Rey, 1× UEFA Cup (1989)</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://en.wikipedia.org/wiki/Pel%C3%A9">Pelé</a></td>
+                            <td>Santos (1956-1974), New York Cosmos (1975-1977)</td>
+                            <td>Brazil</td>
+                            <td><strong>3× FIFA World Cups (1958, 1962, 1970)</strong>, 2× Copa Libertadores, 10× Campeonato Paulista</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+        </section>
+
+        <aside class="container">
+            <h3>Did You Know?</h3>
+            <p>Pelé is the only player to win three FIFA World Cups, achieving this feat in 1958, 1962, and 1970.</p>
+        </aside>
+
+        <article class="container">
+            <h2>About Best Legends</h2>
+            <p>This website celebrates the greatest soccer players in history, showcasing their careers, achievements, and iconic moments. Explore players by nationality or team, and share your favorite legend with us!</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 Best Legends</p>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+    <button id="toggle-contrast" title="Toggle High Contrast">High Contrast</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
